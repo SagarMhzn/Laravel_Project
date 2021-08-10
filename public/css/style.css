@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #dae0e6;
+    font-family: "Open Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar {
+    /* position: fixed; */
+    width: 100%;
+}
+
+.hidden {
+    padding-top: 2%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #04aa6d;
+}
+
+/* ============== Cards =================*/
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.card {
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 1rem 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.user-profile-wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.user-profile-wrap p {
+    font-size: 0.9rem;
+}
+
+.profile {
+    width: 25px;
+    height: 25px;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+}
+
+.post-controls {
+    width: 20%;
+    margin-left: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content-post {
+    margin-bottom: 0.7rem;
+}
+
+.comment-button {
+    padding: 0.2rem 0.8rem;
+    transition: 0.3s;
+    color: black;
+}
+
+.comment-button:hover {
+    background-color: rgb(214, 212, 212);
+    border-radius: 0.3rem;
+}
+
+.upvote-icon {
+    font-size: 1.2rem;
+    margin-right: 0.3rem;
+    cursor: pointer;
+}
+
+.downvote-icon {
+    font-size: 1.2rem;
+    margin-right: 0.3rem;
+    cursor: pointer;
+}
+
+.upvote-wrap,
+.downvote-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.upvoted {
+    color: red;
+}
+
+.downvoted {
+    color: blue;
+}
