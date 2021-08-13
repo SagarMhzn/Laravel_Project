@@ -31,9 +31,9 @@ Home page
 
           <div class="post-controls">
             <div class="upvote-wrap">
-              <i class="bx bxs-upvote upvote-icon"></i>
+              <button class="upvote-Btn" onClick="upvoteHandler()"> <i class="bx bxs-upvote " id="upvote-icon"></i>  </button>
 
-              <span> 1.1k</span>
+              <span id="upvote-count">100</span>
             </div>
 
             <div class="downvote-wrap">

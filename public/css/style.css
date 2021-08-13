@@ -137,4 +137,19 @@ li a:hover:not(.active) {
 
 .downvoted {
     color: blue;
+} 
+
+.upvote-Btn{
+    border: none;
+    outline: none;
+    background-color: transparent;  
 }
+
+.upvote-wrap{
+    margin-right: 10px;
+}
+
+#upvote-count{
+    margin-right: 0;
+}
+
