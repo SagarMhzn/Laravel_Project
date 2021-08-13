@@ -50,5 +50,6 @@
       @yield("content")
     </div>
     
+    <script src="{{url('js/index.js')}}"></script>
   </body>
 </html>
