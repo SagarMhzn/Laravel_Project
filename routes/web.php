@@ -39,7 +39,7 @@ Route::get('/aboutUs', function() {
 
 //Route::middleware('auth')->get('/comment/{post_id}', [CommentController::class, "show"]) -> name('user.comment');
 
-Route::middleware('auth')->get('/comment/{post_id}',[CommentController::class, "show"])->name('user.comment'); 
+Route::get('/comment/{post_id}',[CommentController::class, "show"])->name('user.comment'); 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

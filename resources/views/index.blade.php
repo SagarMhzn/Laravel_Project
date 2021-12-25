@@ -29,7 +29,7 @@ Home page
               {{$post->user_post}}
               
             </p>
-            <img src="{{url($post->image)}}" alt="image" class="profile" style="width: 50%; height:50%; border-radius:0;" > 
+            <img src="{{url($post->image)}}" alt="image" class="posted_image" {{--style="width: 50%; height:50%; border-radius:0;"--}} > 
           </div>
 
           <div class="post-controls">

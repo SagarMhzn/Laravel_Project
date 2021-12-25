@@ -37,6 +37,13 @@ User page
               <a href="{{route('user.timeline.delete', ['post_id'=>$post->id])}}">Delete</a>
             </div>
 
+            <div class="downvote-wrap">
+              <i class='bx bx-reply'></i>
+              <a href="{{route('user.comment', ['post_id'=>$post->id])}}">Goto</a>
+              {{-- <a href="{{route('user.comment', ['post_id'=>$post->id])}}" class="comment-button">comments</a> --}}
+            </div>
+
+            
         </div>
 
     </div>

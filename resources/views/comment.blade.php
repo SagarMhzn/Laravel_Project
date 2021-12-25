@@ -10,7 +10,8 @@ Comment page
     <div class="post-info">
       <div class="user-profile-wrap">
         <img src="{{url('image/Noise.png')}}" alt="image" class="profile" />
-        <p>{{$post->name}} &nbsp; <b>{{$post->title}}</b></p>
+        <p> <a href="{{ route('user.profile', ['user_id'=>$post->user_id]) }}">{{$post->name}} &nbsp; </a> <b>{{$post->title}}</b></p>
+        {{-- <p>{{$post->name}} &nbsp; <b>{{$post->title}}</b></p> --}}
         
       </div>
       <hr />
@@ -35,11 +36,18 @@ Comment page
     </div>
 
     <div class="commentfield" >
-      <form action="{{route('user.reply',["user_id" => Auth::user()->id,"post_id"=> $post->id ])}}" method="GET">
-        @csrf
-      <input type="text" placeholder="enter your comment" name="user_comment">
-      <input type="submit">
-      </form>
+      @if (Route::has("login"))
+        @auth 
+        <form action="{{route('user.reply',["user_id" => Auth::user()->id,"post_id"=> $post->id ])}}" method="GET">
+          @csrf
+          <input type="text" placeholder="enter your comment" name="user_comment">
+          <input type="submit">
+        </form>
+        @else
+        <p><a href="/login">Log In to Comment</a></p>
+        @endauth
+    @endif
+
     </div>
 
   </div>
@@ -60,7 +68,10 @@ Comment page
     @if ($post->id == $comment->post_id)
     <div class="comment-user-name-wrapper">
       <img src = "http://localhost/img/profile.jpg" />
-        <p class="user-name"><b>{{$comment->name}}</b></p>
+      {{-- <a href="{{ route('user.profile', ['user_id'=>$post->user_id]) }}">{{$post->name}} --}}
+        <p class="user-name">
+          <a href="{{ route('user.profile', ['user_id'=>$comment->user_id]) }}">
+          <b>{{$comment->name}}</b></p>
     </div>
       <p class="user-comment">{{$comment->user_comment}}</p>
       <hr class="hr-full-line"/>
