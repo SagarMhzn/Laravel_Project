@@ -46,6 +46,8 @@ class UserpostController extends Controller
         $post->title = $request->title;
         $post->user_id = $user_id;
         $post->user_post = $request->user_post;
+        $file_name = $request->file('image')->getClientOriginalName();
+        $post->image = "image/".$file_name;
         $post->save();
         return redirect()->route('home');
     }
@@ -85,6 +87,8 @@ class UserpostController extends Controller
         $post = Userpost::find($id);
         $post->title = $request->title;
         $post->user_post = $request->user_post;
+        $file_name = $request->file('image')->getClientOriginalName();
+        $post->image = "image/".$file_name;
         $post->save();
         return redirect()->route('home');
     }
@@ -100,5 +104,11 @@ class UserpostController extends Controller
         //
         Userpost::destroy($id);
         return redirect()->route('home');
+    }
+
+    public function showProfile($user_id){
+        $userPosts = Userpost::all();
+        // dd($userPosts);
+        return view('userprofile', compact('userPosts', 'user_id'));
     }
 }

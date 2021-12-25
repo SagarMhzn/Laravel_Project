@@ -20,13 +20,16 @@ Home page
           <div class="post-info">
             <div class="user-profile-wrap">
               <img src="{{url('image/Noise.png')}}" alt="image" class="profile" />
-              <p>{{$post->name}} <b>{{$post->title}}</b></p>
+              {{-- <p>{{$post->name}} &nbsp; <b>{{$post->title}}</b></p> --}}
+              <p> <a href="{{ route('user.profile', ['user_id'=>$post->user_id]) }}">{{$post->name}} &nbsp; </a> <b>{{$post->title}}</b></p>
               
             </div>
             <hr />
             <p class="content-post">
               {{$post->user_post}}
+              
             </p>
+            <img src="{{url($post->image)}}" alt="image" class="profile" style="width: 50%; height:50%; border-radius:0;" > 
           </div>
 
           <div class="post-controls">

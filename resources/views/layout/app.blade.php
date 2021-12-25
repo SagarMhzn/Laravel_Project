@@ -23,7 +23,7 @@
         
       <ul >
         <li><a href="/">Online Forum</a></li>
-        <li style="float: center"><a href="#about_us">About Us</a></li>
+        <li style="float: center"><a href="{{ route('aboutUs') }}">About Us</a></li>
         @if(Route::has("login"))
             @auth
                 <li style="float: right"><a href="{{route('user.timeline',['user_id'=>Auth::user()->id])}}">{{Auth::user()->name}}</a></li>

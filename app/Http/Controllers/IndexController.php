@@ -14,7 +14,6 @@ class IndexController extends Controller
      */
     public function index()
     {
-        //
         $posts = Userpost::all();
         return view('index', compact('posts'));
     }

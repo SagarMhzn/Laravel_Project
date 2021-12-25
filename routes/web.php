@@ -23,7 +23,7 @@ use App\Http\Controllers\UserController;
 
 Route::get('/',[IndexController::class, "index"])->name('home');
 
-Route::prefix('user')->group( function(){
+Route::prefix('user')->middleware('auth')->group( function(){
     Route::get('/form',[UserpostController::class,"create"])->name('user.addpostform');
     Route::post('/store/{user_id}',[UserpostController::class,"store"])->name('userpost.store');
     Route::get('/timeline/{user_id}',[UserController::class,"show"])->name('user.timeline');
@@ -32,6 +32,11 @@ Route::prefix('user')->group( function(){
     Route::get('/userpost/delete/{post_id}',[UserpostController::class,"destroy"])->name('user.timeline.delete');
 });
 
+Route::get('/userProfile/{user_id}', [UserpostController::class, 'showProfile'])->name('user.profile');
+Route::get('/aboutUs', function() {
+    return view('about');
+})->name('aboutUs');
+
 //Route::middleware('auth')->get('/comment/{post_id}', [CommentController::class, "show"]) -> name('user.comment');
 
 Route::middleware('auth')->get('/comment/{post_id}',[CommentController::class, "show"])->name('user.comment'); 
@@ -39,3 +44,8 @@ Route::middleware('auth')->get('/comment/{post_id}',[CommentController::class, "
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::prefix('user')->group( function(){
+    Route::get('/userComment/{user_id}/{post_id}',[CommentController::class,"store"])->name('user.reply');
+    // Route::get('/userComment/{user_id}/{post_id}',[CommentController::class,"index"])->name('user.replyshow');
+});

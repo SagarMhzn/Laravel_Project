@@ -1,4 +1,4 @@
-var count=2;
+var count=999;
 var clicked=false;
 document.getElementById("upvote-count").innerHTML=count;
 

@@ -5,6 +5,10 @@ User page
 @endsection
 
 @section("content")
+  
+<div class="edit_profile">
+  <a href="{{url('user/profile')}}">Update user profile</a>
+  </div>
 
 @foreach ($posts as $post)
         
@@ -13,8 +17,7 @@ User page
         <div class="post-info">
             <div class="user-profile-wrap">
               <img src="{{url('image/Noise.png')}}" alt="image" class="profile" />
-              <p>{{$post->name}} <b>{{$post->title}}</b></p>
-              
+              <p> {{$post->name}} <b>{{$post->title}}</b></p>
             </div>
             <hr />
             <p class="content-post">

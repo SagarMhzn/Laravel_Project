@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Userpost;
+use App\Models\Comment;
+use Illuminate\Support\Facades\DB;
 
 class CommentController extends Controller
 {
@@ -14,7 +16,6 @@ class CommentController extends Controller
      */
     public function index()
     {
-        //
     }
 
     /**
@@ -33,9 +34,15 @@ class CommentController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $user_id, $post_id)
     {
-        //
+        $comment = new Comment();
+
+        $comment -> user_id = $user_id;
+        $comment -> post_id = $post_id;
+        $comment -> user_comment = $request -> user_comment;
+        $comment -> save();
+        return redirect()->route("user.comment", ["post_id"=>$post_id]);
     }
 
     /**
@@ -47,8 +54,11 @@ class CommentController extends Controller
     public function show($id)
     {
         //
+        // $comments = Comment::all();
+        $comments = DB::table('comments')->join('users', 'comments.user_id', '=', 'users.id')->get();
         $post = Userpost::find($id);
-        return view("comment", compact('post') );
+        // dd($comments);
+        return view("comment", compact('post', 'comments') );
     }
 
     /**
