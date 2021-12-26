@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap');
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #dae0e6;
+    background-color: #292b2c;
     font-family: "Open Sans", sans-serif;
+    color: white;
+
+    background-image: url("/image/Celestial.jpg");
 }
 
 h1,
@@ -22,6 +26,9 @@ a {
 
 .navbar {
     /* position: fixed; */
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: bolder ;
+    font-size: 20px;
     width: 100%;
     position: fixed;
     z-index: 1;
@@ -68,9 +75,13 @@ li a:hover:not(.active) {
 }
 
 .card {
-    background-color: white;
+    
+    background-color: black;
     border-radius: 0.5rem;
     padding: 1rem 1.5rem;
+    margin-bottom: 2rem;
+    width: 60vw;
+    margin: auto;
     margin-bottom: 2rem;
 }
 
@@ -78,10 +89,17 @@ li a:hover:not(.active) {
     display: flex;
     flex-direction: row;
     align-items: center;
+
 }
 
 .user-profile-wrap p {
     font-size: 0.9rem;
+    color: white;
+}
+
+.user-profile-wrap p a {
+    font-size: 0.9rem;
+    color: white;
 }
 
 .profile {
@@ -93,6 +111,7 @@ li a:hover:not(.active) {
 
 .post-info {
     width: 100%;
+
 }
 .post-controls {
     width: 20%;
@@ -109,20 +128,23 @@ li a:hover:not(.active) {
 }
 
 .comment-button {
+    margin-left: 1rem;
     padding: 0.2rem 0.8rem;
     transition: 0.3s;
-    color: black;
+    color: white;
 }
 
 .comment-button:hover {
     background-color: rgb(214, 212, 212);
     border-radius: 0.3rem;
+    color: black;
 }
 
-.upvote-icon {
+#upvote-icon {
     font-size: 1.2rem;
     margin-right: 0.3rem;
     cursor: pointer;
+    color: white;
 }
 
 .downvote-icon {
@@ -162,11 +184,11 @@ li a:hover:not(.active) {
 
 
 .userComments{
+    width: 62vw;
     background-color: white;
-    margin: 20px 0px;
     padding: 10PX;
     border-radius: 5px;
-
+    margin-left: 120px;
 }
 
 .hr-full-line{
@@ -212,7 +234,143 @@ li a:hover:not(.active) {
 }
 
 .posted_image{
-    width: 20%;
-    height: 20%;
+    width: 100%;
+    height: 100%;
     align-items: center;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+
+.posts .add_post{
+    color: white;
+    padding: 10px 10px;
+    transition: 200ms;
+
+}
+
+.posts .add_post:hover{
+    background-color: rgb(36, 54, 54);
+    text-decoration: underline;
+}
+
+.post{
+    /* font-family: ; */
+    width: 60%;
+    margin: auto;
+
+}
+
+.post .input_field{
+    width: 100%;
+    margin-bottom:.5rem ;
+    padding: 7px;
+    background-color: black;
+    color: white;
+}
+
+.post label{
+    display: block;
+    text-align: center;
+
+}
+
+.choose_file{
+    width: 100%;
+    text-align: center;
+    margin-top: .3rem;
+}
+ 
+.choose_file .post_button{
+    margin-top: .5rem;
+    background-color: rgba(71, 53, 53,0) ;
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    transition: 200ms;
+}
+
+.choose_file .post_button:hover{
+    background-color: rgb(36, 54, 54);
+    text-decoration: underline;
+}
+
+.Log-in-for-comment{
+    color: white;
+    max-width: 150px;
+}
+
+.Log-in-for-comment:hover{
+    color: yellow;
+    text-decoration: underline;
+}
+
+.textbox{
+    display: flex;
+    align-items: bottom;
+    
+}
+
+.click_to_submit{
+    background-color: green;
+    color: white;
+    margin-left:1rem ;
+    cursor: pointer;
+    border: none;
+    border-radius: 2px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.click_to_submit:hover{
+    background-color:rgba(0, 128, 0, 0.692) ;
+}
+
+.comment_box{
+    max-height: 50px;
+    background-color: rgba(128, 128, 128, 0.308);
+    color: white;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 20px;
+    letter-spacing: .1rem;
+}
+
+.textbox  {
+    margin-top: 1rem;
+}
+
+.clickbtn{
+    width: 55%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    background-color: #2a2c2b;
+    align-items: center;
+    padding: 2px 10px;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.clickbtn img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.clickbtn input {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.click_here{
+    width: 200px;
+    padding: 10px 0px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-radius: 4px;
+    border: none;
+    background-color: black;
+    color: white;
 }

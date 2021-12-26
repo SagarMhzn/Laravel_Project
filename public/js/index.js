@@ -1,30 +1,38 @@
-var count=999;
-var clicked=false;
-document.getElementById("upvote-count").innerHTML=count;
+var count = 999;
+var clicked = false;
+document.getElementById("upvote-count").innerHTML = count;
 
 
 
 
-function upvoteHandler(){
+function upvoteHandler() {
     console.log("ahaaba")
-    
-    var count=document.getElementById("upvote-count").innerHTML;
+
+    var count = document.getElementById("upvote-count").innerHTML;
 
     console.log(count)
 
-    count=Number(count);
+    count = Number(count);
 
     console.log(count)
-    if(!clicked){
-        count=count+1;
-        document.getElementById("upvote-icon").className += "upvoted"
+    if (!clicked) {
+        count = count + 1;
+        document.getElementById("upvote-icon").className += " upvoted";
+        document.getElementById("upvote-icon").style.color = "red";
+        clicked = true;
+    } else {
+        count = count - 1;
+        document.getElementById("upvote-icon").className += " upvoted";
+        document.getElementById("upvote-icon").style.color = "white";
 
-        clicked=true;
+        clicked = false;
     }
-    else{
-        count=count-1;
-        document.getElementById("upvote-icon").className += "upvoted"
-        clicked=false;
-    }
-    document.getElementById("upvote-count").innerHTML=count;
+    document.getElementById("upvote-count").innerHTML = count;
+}
+
+
+
+// addpost js
+document.getElementById('addPost').onclick = function () {
+    location.href = "/user/form";
 }

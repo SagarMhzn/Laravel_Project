@@ -17,7 +17,7 @@ User page
         <div class="post-info">
             <div class="user-profile-wrap">
               <img src="{{url('image/Noise.png')}}" alt="image" class="profile" />
-              <p> {{$post->name}} <b>{{$post->title}}</b></p>
+              <p> {{$post->name}} &nbsp; <b>{{$post->title}}</b></p>
             </div>
             <hr />
             <p class="content-post">

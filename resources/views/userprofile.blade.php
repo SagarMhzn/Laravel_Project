@@ -13,13 +13,14 @@ User page
             <div class="post-info">
                 <div class="user-profile-wrap">
                 <img src="{{url('image/Noise.png')}}" alt="image" class="profile" />
-                <p> {{$userPost->name}} <b>{{$userPost->title}}</b></p>
+                <p> {{$userPost->name}} posted: <b> {{$userPost->title}}</b></p>
                 </div>
                 <hr />
                 <p class="content-post">
                 {{$userPost->user_post}}
                 </p>
             </div>
+            <img src="{{url($userPost->image)}}" alt="image" class="posted_image"> 
 
             <div class="post-controls">
 
