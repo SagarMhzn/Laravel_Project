@@ -6,8 +6,7 @@ document.getElementById("upvote-count").innerHTML = count;
 
 
 function upvoteHandler() {
-    console.log("ahaaba")
-
+    
     var count = document.getElementById("upvote-count").innerHTML;
 
     console.log(count)

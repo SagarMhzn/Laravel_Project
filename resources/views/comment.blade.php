@@ -27,9 +27,9 @@ Comment page
 
     <div class="post-controls">
       <div class="upvote-wrap">
-        <button class="upvote-Btn" onClick="upvoteHandler()"> <i class='bx bx-up-arrow' id="upvote-icon" ></i>  </button>
+        <button class="upvote-Btn"> <i class='bx bx-up-arrow upvoted' ></i>  </button>
         
-        <span id="upvote-count">100</span>
+        <span >1000</span>
       </div>
 
     {{-- <div class="post-controls">

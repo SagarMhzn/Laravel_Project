@@ -26,7 +26,7 @@ User page
 
                 <div class="downvote-wrap">
                 <i class='bx bx-reply'></i>
-                <a href="{{route('user.comment', ['post_id'=>$userPost->id])}}">Goto</a>
+                <p><a href="{{route('user.comment', ['post_id'=>$userPost->id])}}">Goto</a></p>
                 
                 </div>
 

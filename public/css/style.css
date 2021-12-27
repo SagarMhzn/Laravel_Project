@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap%27');
+
 body {
     margin: 0;
     padding: 0;
@@ -26,13 +28,14 @@ a {
 
 .navbar {
     /* position: fixed; */
-    font-family: 'Nunito Sans', sans-serif;
+    
     font-weight: bolder ;
     font-size: 20px;
     width: 100%;
     position: fixed;
     z-index: 1;
     height: 10vh;
+    align-content: center;
 }
 
 .hidden {
@@ -120,6 +123,14 @@ li a:hover:not(.active) {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    
+}
+
+.post-controls a{
+    text-decoration: none;
+    color: white;
+    margin-right: 2rem;
+    
 }
 
 .content-post {
@@ -373,4 +384,10 @@ li a:hover:not(.active) {
     border: none;
     background-color: black;
     color: white;
+}
+
+.edit_profile a{
+    color: white;
+    text-decoration: none;
+    
 }

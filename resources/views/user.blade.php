@@ -25,6 +25,8 @@ User page
             </p>
         </div>
 
+        <img src="{{url($post->image)}}" alt="image" class="posted_image"> 
+
         <div class="post-controls">
             <div class="upvote-wrap">
               <i class='bx bxs-pencil'></i>

@@ -22,7 +22,7 @@
         
         
       <ul >
-        <li><a href="/">Online Forum</a></li>
+        <li><a href="/" style="font-family: 'Major Mono Display', monospace; font-size:20px; margin:0; padding-bottom:-50Spx">Online Forum</a></li>
         <li style="float: center"><a href="{{ route('aboutUs') }}">About Us</a></li>
         @if(Route::has("login"))
             @auth

@@ -9,11 +9,11 @@ Aboout us
         <p class="heading">About Us</p>
         <hr>
         <p class="about-content">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis vitae harum ullam dignissimos ea minus quod consectetur pariatur nesciunt voluptas quam iusto deleniti aliquid, impedit veritatis nobis nostrum! Ab, labore!
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis vitae harum ullam dignissimos ea minus quod consectetur pariatur nesciunt voluptas quam iusto deleniti aliquid, impedit veritatis nobis nostrum! Ab, labore!
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis vitae harum ullam dignissimos ea minus quod consectetur pariatur nesciunt voluptas quam iusto deleniti aliquid, impedit veritatis nobis nostrum! Ab, labore!
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis vitae harum ullam dignissimos ea minus quod consectetur pariatur nesciunt voluptas quam iusto deleniti aliquid, impedit veritatis nobis nostrum! Ab, labore!
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis vitae harum ullam dignissimos ea minus quod consectetur pariatur nesciunt voluptas quam iusto deleniti aliquid, impedit veritatis nobis nostrum! Ab, labore!
+            Speak your heart out. A lot of us often struggle to speak out loud ,
+            lay our thoughts , share our opinions because of the judgement that comes along. 
+            We at OnlineForum provide a place,a platform without such judgement. We at OnlineForum 
+            believe in sharing ideas and views on different topics. Whether you are looking for the hottest
+            news around the world,dramas or memes for fun. There is a place for you here.
         </p>
     </div>
 @endsection

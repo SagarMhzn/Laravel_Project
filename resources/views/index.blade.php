@@ -44,7 +44,7 @@ Home page
             <div class="upvote-wrap">
               <button class="upvote-Btn" onClick="upvoteHandler()"> <i class='bx bx-up-arrow' id="upvote-icon" ></i>  </button>
               
-              <span id="upvote-count">100</span>
+              <span id="upvote-count">0</span>
             </div>
 {{-- 
             <div class="downvote-wrap">
